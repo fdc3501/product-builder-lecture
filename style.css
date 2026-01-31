@@ -1,32 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #FF5733;
-    --secondary-color: #FFC300;
-    --background-color: #f0f2f5;
-    --card-background: #ffffff;
-    --text-color: #333;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --deep-shadow-color: rgba(0, 0, 0, 0.2); /* New: Deeper shadow */
-    --paragraph-color: #666;
-    --button-gradient-start: #FF7043; /* New: Gradient for button */
-    --button-gradient-end: #FF5733;   /* New: Gradient for button */
-    --border-color: rgba(0, 0, 0, 0.05); /* New: Subtle border color */
+    /* Pastel Light Mode Colors */
+    --primary-color: #A2D2FF; /* Soft Sky Blue */
+    --secondary-color: #FFC7EA; /* Pastel Pink */
+    --background-color: #F8F9FA; /* Very Light Gray */
+    --card-background: #FFFFFF; /* White */
+    --text-color: #495057; /* Soft Dark Gray */
+    --shadow-color: rgba(162, 210, 255, 0.2); /* Soft blue shadow */
+    --deep-shadow-color: rgba(162, 210, 255, 0.4); /* Deeper soft blue shadow */
+    --paragraph-color: #6C757D; /* Slightly lighter soft dark gray */
+    --button-gradient-start: #B0E0E6; /* Powder Blue */
+    --button-gradient-end: #A2D2FF;   /* Soft Sky Blue */
+    --border-color: rgba(162, 210, 255, 0.1); /* Very light blue border */
 }
 
 body[data-theme='dark'] {
-    --primary-color: #FF5733; /* Can be adjusted for dark mode if needed */
-    --secondary-color: #FFC300; /* Can be adjusted for dark mode if needed */
-    --background-color: #2c2c2c;
-    --card-background: #3c3c3c;
-    --text-color: #f0f0f0;
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    --deep-shadow-color: rgba(0, 0, 0, 0.6); /* New: Deeper shadow for dark mode */
-    --paragraph-color: #b0b0b0;
-    --button-gradient-start: #FF5733; /* Dark mode gradient */
-    --button-gradient-end: #E64A19;   /* Dark mode gradient */
-    --border-color: rgba(255, 255, 255, 0.08); /* Dark mode subtle border */
-    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%235a5a5a" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    /* Pastel Dark Mode Colors */
+    --primary-color: #8D9EFF; /* Muted Lavender Blue */
+    --secondary-color: #F8BBD0; /* Muted Light Pink */
+    --background-color: #2F3C7E; /* Soft Deep Indigo */
+    --card-background: #3A4790; /* Slightly Lighter Indigo */
+    --text-color: #E0E0E0; /* Very Light Gray */
+    --shadow-color: rgba(141, 158, 255, 0.2); /* Muted lavender shadow */
+    --deep-shadow-color: rgba(141, 158, 255, 0.4); /* Deeper muted lavender shadow */
+    --paragraph-color: #B0B7D6; /* Light Muted Blue */
+    --button-gradient-start: #8D9EFF; /* Muted Lavender Blue */
+    --button-gradient-end: #778BEB;   /* Slightly darker Lavender Blue */
+    --border-color: rgba(141, 158, 255, 0.15); /* Muted lavender border */
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%233A4790" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
 
 body {
@@ -38,7 +40,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23CED4DA" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
 
 .container {
@@ -58,7 +60,7 @@ h1 {
     font-weight: 700;
     margin-bottom: 0.5rem;
     /* Subtle text shadow for depth */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Lighter text shadow */
 }
 
 p {
@@ -86,14 +88,14 @@ p {
     font-size: 1.5rem;
     font-weight: 600;
     /* Spherical shadow and border */
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 5px 15px var(--shadow-color);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 0 5px 15px var(--shadow-color); /* Lighter inset shadow */
     border: 2px solid var(--primary-color);
     transition: all 0.3s ease;
 }
 
 .number-circle:hover {
     transform: translateY(-5px) scale(1.05); /* Added scale for more pop */
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3), 0 8px 20px var(--deep-shadow-color);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15), 0 8px 20px var(--deep-shadow-color); /* Lighter hover shadows */
 }
 
 #generate-btn {
@@ -106,20 +108,20 @@ p {
     font-weight: 600;
     cursor: pointer;
     /* Enhanced shadow for a lifted button */
-    box-shadow: 0 8px 20px rgba(255, 87, 51, 0.4), inset 0 -3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px var(--shadow-color), inset 0 -3px 5px rgba(0,0,0,0.1); /* Lighter shadows */
     border: 1px solid var(--primary-color); /* Subtle border */
     transition: all 0.3s ease;
 }
 
 #generate-btn:hover {
-    background-color: #E64A19;
-    box-shadow: 0 12px 25px rgba(255, 87, 51, 0.6), inset 0 -4px 6px rgba(0,0,0,0.3);
+    background-color: var(--button-gradient-end); /* Use end color for hover */
+    box-shadow: 0 12px 25px var(--deep-shadow-color), inset 0 -4px 6px rgba(0,0,0,0.15); /* Lighter hover shadows */
     transform: translateY(-3px) scale(1.02); /* More pronounced lift */
 }
 
 #generate-btn:active {
     transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.4), inset 0 2px 5px rgba(0,0,0,0.3); /* Pressed in effect */
+    box-shadow: 0 4px 15px var(--shadow-color), inset 0 2px 5px rgba(0,0,0,0.15); /* Pressed in effect, lighter shadows */
 }
 
 @media (max-width: 480px) {
@@ -148,7 +150,7 @@ p {
 
 #theme-toggle {
     background: var(--card-background);
-    border: 1px solid var(--shadow-color);
+    border: 1px solid var(--border-color); /* Use pastel border color */
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -157,13 +159,13 @@ p {
     justify-content: center;
     align-items: center;
     /* Enhanced shadow for a button-like feel */
-    box-shadow: 0 3px 8px var(--shadow-color), inset 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 8px var(--shadow-color), inset 0 1px 3px rgba(0,0,0,0.05); /* Lighter shadows */
     transition: all 0.3s ease;
     color: var(--text-color); /* Icon color */
 }
 
 #theme-toggle:hover {
-    box-shadow: 0 5px 12px var(--deep-shadow-color), inset 0 1px 4px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 12px var(--deep-shadow-color), inset 0 1px 4px rgba(0,0,0,0.1); /* Lighter hover shadows */
     transform: translateY(-1px);
 }
 
