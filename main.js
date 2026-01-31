@@ -50,7 +50,7 @@
         }
     }
 
-// Theme switching logic (remains the same)
+// Theme switching logic
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -80,3 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 themeToggle.addEventListener('click', toggleTheme);
+
+// Tab switching logic
+document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function showTab(tabId) {
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        document.getElementById(tabId + '-section').classList.add('active');
+        document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
+    }
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.dataset.tab;
+            showTab(tabId);
+        });
+    });
+
+    // Show the first tab by default
+    showTab('animal-test');
+});
