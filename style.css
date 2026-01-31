@@ -1,22 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    /* Pastel Light Mode Colors */
-    --primary-color: #A2D2FF; /* Soft Sky Blue */
-    --secondary-color: #FFC7EA; /* Pastel Pink */
-    --background-color: #F8F9FA; /* Very Light Gray */
-    --card-background: #FFFFFF; /* White */
-    --text-color: #495057; /* Soft Dark Gray */
-    --shadow-color: rgba(162, 210, 255, 0.2); /* Soft blue shadow */
-    --deep-shadow-color: rgba(162, 210, 255, 0.4); /* Deeper soft blue shadow */
-    --paragraph-color: #6C757D; /* Slightly lighter soft dark gray */
-    --button-gradient-start: #B0E0E6; /* Powder Blue */
-    --button-gradient-end: #A2D2FF;   /* Soft Sky Blue */
-    --border-color: rgba(162, 210, 255, 0.1); /* Very light blue border */
-}
-
-body[data-theme='dark'] {
-    /* Pastel Dark Mode Colors */
+    /* Pastel Dark Mode Colors (now default) */
     --primary-color: #8D9EFF; /* Muted Lavender Blue */
     --secondary-color: #F8BBD0; /* Muted Light Pink */
     --background-color: #2F3C7E; /* Soft Deep Indigo */
@@ -31,6 +16,22 @@ body[data-theme='dark'] {
     background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%233A4790" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
 
+body[data-theme='light'] {
+    /* Pastel Light Mode Colors */
+    --primary-color: #A2D2FF; /* Soft Sky Blue */
+    --secondary-color: #FFC7EA; /* Pastel Pink */
+    --background-color: #F8F9FA; /* Very Light Gray */
+    --card-background: #FFFFFF; /* White */
+    --text-color: #495057; /* Soft Dark Gray */
+    --shadow-color: rgba(162, 210, 255, 0.2); /* Soft blue shadow */
+    --deep-shadow-color: rgba(162, 210, 255, 0.4); /* Deeper soft blue shadow */
+    --paragraph-color: #6C757D; /* Slightly lighter soft dark gray */
+    --button-gradient-start: #B0E0E6; /* Powder Blue */
+    --button-gradient-end: #A2D2FF;   /* Soft Sky Blue */
+    --border-color: rgba(162, 210, 255, 0.1); /* Very light blue border */
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23CED4DA" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
@@ -40,7 +41,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23CED4DA" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    /* The background-image is now inherited from :root or body[data-theme='light'] */
 }
 
 .container {
@@ -176,16 +177,20 @@ p {
     fill: none; /* Make sure fill is none if stroke is used for outline */
 }
 
-/* Hide moon icon by default (light mode) */
-body .theme-switch-wrapper .moon {
+/* Icon display logic: Moon for dark (default), Sun for light */
+/* Hide sun icon by default (dark mode) */
+body .theme-switch-wrapper .sun {
     display: none;
 }
 
-/* Show moon icon in dark mode, hide sun */
-body[data-theme='dark'] .theme-switch-wrapper .moon {
+/* Show sun icon in light mode, hide moon */
+body[data-theme='light'] .theme-switch-wrapper .sun {
     display: block;
 }
-
-body[data-theme='dark'] .theme-switch-wrapper .sun {
+body[data-theme='light'] .theme-switch-wrapper .moon {
     display: none;
+}
+/* Show moon icon in dark mode (default) */
+body .theme-switch-wrapper .moon {
+    display: block;
 }
