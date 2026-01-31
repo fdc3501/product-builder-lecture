@@ -1,28 +1,33 @@
 const generateBtn = document.getElementById('generate-btn');
-const numberDisplay = document.querySelector('.number-display');
+const menuDisplay = document.querySelector('.menu-display'); // Changed from .number-display
 
-function generateLottoNumbers() {
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
-    return Array.from(numbers);
+// List of dinner menu items
+const dinnerMenuItems = [
+    'Pasta Alfredo', 'Chicken Stir-fry', 'Beef Tacos', 'Vegetable Curry',
+    'Grilled Salmon with Asparagus', 'Pizza (Homemade)', 'Lentil Soup with Bread',
+    'Shepherd\'s Pie', 'Chicken Caesar Salad', 'Burger and Fries',
+    'Sushi Rolls', 'Roast Chicken with Root Vegetables', 'Quiche Lorraine',
+    'Shrimp Scampi', 'Falafel Wraps', 'Pork Chops with Applesauce',
+    'Mushroom Risotto', 'Tomato Soup with Grilled Cheese', 'Steak with Baked Potato',
+    'Enchiladas', 'Bibimbap', 'Fish and Chips', 'Goulash', 'Lamb Chops'
+];
+
+function getDinnerRecommendation() {
+    const randomIndex = Math.floor(Math.random() * dinnerMenuItems.length);
+    return dinnerMenuItems[randomIndex];
 }
 
-function displayNumbers(numbers) {
-    numberDisplay.innerHTML = ''; // Clear previous numbers
-    numbers.forEach(number => {
-        const numberCircle = document.createElement('div');
-        numberCircle.classList.add('number-circle');
-        numberCircle.textContent = number;
-        numberDisplay.appendChild(numberCircle);
-    });
+function displayRecommendation(recommendation) {
+    menuDisplay.innerHTML = ''; // Clear previous content
+    const recommendationElement = document.createElement('div');
+    recommendationElement.classList.add('menu-item'); // New class for styling
+    recommendationElement.textContent = recommendation;
+    menuDisplay.appendChild(recommendationElement);
 }
 
 function handleGenerateClick() {
-    const lottoNumbers = generateLottoNumbers();
-    displayNumbers(lottoNumbers);
+    const recommendation = getDinnerRecommendation();
+    displayRecommendation(recommendation);
 }
 
 generateBtn.addEventListener('click', handleGenerateClick);
@@ -30,7 +35,7 @@ generateBtn.addEventListener('click', handleGenerateClick);
 // Initial generation on page load
 handleGenerateClick();
 
-// Theme switching logic
+// Theme switching logic (remains the same)
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
