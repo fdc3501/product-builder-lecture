@@ -9,16 +9,43 @@
 <body>
     <div class="container">
         <header>
-            <h1>제휴 문의</h1>
+            <h1>파트너십 및 제휴 문의</h1>
+            <p>함께 성장할 파트너를 기다립니다.</p>
         </header>
         <main>
-            <p>저희 서비스에 관심을 가져주셔서 감사합니다. 제휴 문의는 아래 양식을 통해 보내주시면 담당자가 신속하게 연락드리겠습니다.</p>
-            <form action="https://formspree.io/f/mwvbjkaj" method="POST">
-                <label for="email">이메일:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">문의 내용:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">문의 보내기</button>
+            <h2>왜 '오늘은 뭐가 나올까?'와 함께해야 할까요?</h2>
+            <p>저희 서비스는 최신 AI 기술을 활용한 '동물상 테스트'와 꾸준한 재미를 선사하는 '로또 번호 추천' 기능으로 매일 수많은 사용자들에게 즐거움을 주고 있습니다. 독창적이고 매력적인 콘텐츠를 통해 높은 사용자 참여도를 이끌어내고 있으며, 다양한 연령층에게 사랑받고 있습니다.</p>
+            <p>귀사의 브랜드나 서비스를 저희의 활기찬 플랫폼에 노출하여 함께 시너지를 창출할 수 있는 기회를 모색해보세요.</p>
+
+            <h3>다양한 협력의 기회를 환영합니다:</h3>
+            <ul>
+                <li><strong>콘텐츠 제휴:</strong> 귀사의 콘텐츠를 저희 플랫폼에 통합하거나, 저희 콘텐츠를 활용한 새로운 프로젝트를 함께 만들 수 있습니다.</li>
+                <li><strong>이벤트 및 프로모션:</strong> 공동으로 이벤트를 주최하여 사용자들에게 더 큰 즐거움과 혜택을 제공할 수 있습니다.</li>
+                <li><strong>광고 및 스폰서십:</strong> 저희 웹사이트의 특정 영역에 귀사의 브랜드를 노출하여 효과적인 타겟 마케팅을 진행할 수 있습니다.</li>
+                <li><strong>기술 협력:</strong> 양사의 기술력을 결합하여 사용자들에게 전에 없던 새로운 경험을 선사할 수 있습니다.</li>
+            </ul>
+
+            <h2>연락을 기다리겠습니다</h2>
+            <p>저희 서비스에 관심을 가져주셔서 감사합니다. 아래 양식을 통해 귀사의 소개와 제휴 제안 내용을 보내주시면, 담당자가 신속하게 검토 후 연락드리겠습니다.</p>
+            
+            <form action="https://formspree.io/f/mwvbjkaj" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="company">회사/단체명:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">담당자 이름:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">담당자 이메일:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">제휴 제안 내용:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit">제휴 문의 보내기</button>
             </form>
         </main>
     </div>
